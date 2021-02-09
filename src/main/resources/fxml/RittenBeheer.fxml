@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="591.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <MenuBar prefHeight="26.0" prefWidth="800.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#openFietsenBeheer" text="FietsBeheer" />
+                        <MenuItem mnemonicParsing="false" onAction="#openLedenBeheer" text="Ledenbeheer" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <TableView fx:id="tvRitten" layoutX="10.0" layoutY="127.0" onMouseClicked="#SelecteerRit" prefHeight="200.0" prefWidth="778.0">
+            <columns>
+                <TableColumn fx:id="tcId" prefWidth="70" text="Id">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="id" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="tcRijksregisternummer" prefWidth="180" text="Rijksregisternummer">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="lidRijksregisternummer" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="tcRegistratienummer" prefWidth="150" text="Registratienummer">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="fietsRegistratienummer" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="tcStarttijd" prefWidth="150" text="Starttijd">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="starttijd" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="tcEindtijd" prefWidth="150" text="Eindtijd">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="eindtijd" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="tcPrijs" minWidth="0.0" prefWidth="69.60001220703123" text="Prijs">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="prijs" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+        <Button fx:id="btnToevoegen" layoutX="20.0" layoutY="340.0" mnemonicParsing="false" onAction="#toevoegenRit" prefHeight="26.0" prefWidth="139.0" text="Toevoegen" />
+        <Button fx:id="btnAfsluiten" layoutX="20.0" layoutY="385.0" mnemonicParsing="false" onAction="#afsluitenRit" prefHeight="26.0" prefWidth="139.0" text="Afsluiten" />
+        <Button fx:id="btnEersteRitVanLid" layoutX="20.0" layoutY="426.0" mnemonicParsing="false" onAction="#zoekenEersteRit" prefHeight="26.0" prefWidth="139.0" text="EersteRitVanLid" />
+        <Button fx:id="btnActieveRitVanLid" layoutX="186.0" layoutY="340.0" mnemonicParsing="false" onAction="#zoekActiefLid" prefHeight="26.0" prefWidth="157.0" text="ActieveRitVanLid" />
+        <Button fx:id="btnActieveRitVanFiets" layoutX="185.0" layoutY="384.0" mnemonicParsing="false" onAction="#zoekActiefFiets" prefHeight="26.0" prefWidth="158.0" text="ActieveRitVanFiets" />
+        <Label fx:id="laError" layoutX="11.0" layoutY="88.0" prefHeight="18.0" prefWidth="778.0" textFill="RED" />
+        <Label layoutX="270.0" layoutY="26.0" prefHeight="18.0" prefWidth="242.0" text="Rittenbeheer">
+            <font>
+                <Font size="42.0" />
+            </font>
+        </Label>
+        <Label layoutX="391.0" layoutY="357.0" prefHeight="18.0" prefWidth="158.0" text="Rijksregisternummer:" />
+        <Label layoutX="391.0" layoutY="402.0" prefHeight="18.0" prefWidth="158.0" text="Fietsregistratienummer:" />
+        <TextField fx:id="tfStarttijd" layoutX="551.0" layoutY="473.0" prefHeight="26.0" prefWidth="234.0" />
+        <TextField fx:id="tfEindtijd" layoutX="551.0" layoutY="507.0" prefHeight="26.0" prefWidth="234.0" />
+        <TextField fx:id="tfPrijs" layoutX="551.0" layoutY="541.0" prefHeight="26.0" prefWidth="234.0" />
+        <Label fx:id="laStarttijd" layoutX="391.0" layoutY="477.0" prefHeight="18.0" prefWidth="158.0" text="Starttijd: " />
+        <Label fx:id="laEindtijd" layoutX="391.0" layoutY="511.0" prefHeight="18.0" prefWidth="158.0" text="Eindtijd: " />
+        <Label fx:id="laPrijs" layoutX="391.0" layoutY="545.0" prefHeight="18.0" prefWidth="158.0" text="Prijs: " />
+        <ComboBox fx:id="cbRijksregisternr" layoutX="549.0" layoutY="354.0" prefHeight="26.0" prefWidth="234.0" >
+            <items>
+
+            </items>
+        </ComboBox>
+        <ComboBox fx:id="cbFietsregistratienr" layoutX="551.0" layoutY="399.0" prefHeight="26.0" prefWidth="234.0" >
+            <items>
+
+            </items>
+        </ComboBox>
+    </children>
+</AnchorPane>

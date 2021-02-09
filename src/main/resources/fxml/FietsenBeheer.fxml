@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <MenuBar prefHeight="26.0" prefWidth="1000.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Tools">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#openLedenBeheer" text="LedenBeheer" />
+                  <MenuItem mnemonicParsing="false" onAction="#openRittenBeheer" text="RittenBeheer" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label fx:id="laErrorFietsen" alignment="CENTER" contentDisplay="CENTER" layoutX="369.0" layoutY="87.0" prefHeight="18.0" prefWidth="0.0" textAlignment="CENTER" textFill="RED" />
+      <TableView fx:id="tvFietsen" layoutX="14.0" layoutY="121.0" onMouseClicked="#SelecteerFiets" prefHeight="293.0" prefWidth="438.0">
+        <columns>
+            <TableColumn fx:id="tcRegistratienummer" prefWidth="184.3999729156494" text="Registratienummer">
+                <cellValueFactory>
+                    <PropertyValueFactory property="registratienummer" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="tcStatus" minWidth="0.0" prefWidth="100.4000244140625" text="Status">
+                <cellValueFactory>
+                    <PropertyValueFactory property="status" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="tcStandplaats" prefWidth="153.19998168945312" text="Standplaats">
+                <cellValueFactory>
+                    <PropertyValueFactory property="standplaats" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+      </TableView>
+      <Label layoutX="388.0" layoutY="34.0" text="FietsenBeheer">
+         <font>
+            <Font size="42.0" />
+         </font>
+      </Label>
+      <Button layoutX="14.0" layoutY="439.0" mnemonicParsing="false" onAction="#toevoegenFiets" prefHeight="26.0" prefWidth="104.0" text="Toevoegen" />
+      <Button layoutX="134.0" layoutY="439.0" mnemonicParsing="false" onAction="#wijzigenStatusFiets" prefHeight="26.0" prefWidth="134.0" text="Wijzigen status" />
+      <TextField fx:id="tfRegistratienummer" layoutX="672.0" layoutY="121.0" prefHeight="26.0" prefWidth="218.0" />
+      <ChoiceBox fx:id="cbStatus" layoutX="671.0" layoutY="158.0" prefHeight="26.0" prefWidth="218.0" />
+      <ChoiceBox fx:id="cbStandplaats" layoutX="671.0" layoutY="196.0" prefHeight="26.0" prefWidth="218.0" />
+      <TextArea fx:id="taOpmerkingen" layoutX="500.0" layoutY="256.0" prefHeight="158.0" prefWidth="389.0" />
+      <Label layoutX="500.0" layoutY="125.0" text="Registratienummer:" />
+      <Label layoutX="500.0" layoutY="162.0" text="Status:" />
+      <Label layoutX="500.0" layoutY="200.0" text="Standplaats:" />
+      <Label layoutX="500.0" layoutY="234.0" text="Opmerkingen:" />
+      <Button fx:id="btnAnnuleer" layoutX="628.0" layoutY="440.0" mnemonicParsing="false" onAction="#resetVelden" text="Annuleren" />
+      <Button fx:id="btnOK" layoutX="726.0" layoutY="440.0" mnemonicParsing="false" onAction="#opslaan" text="OK" />
+      <Button layoutX="286.0" layoutY="439.0" mnemonicParsing="false" onAction="#wijzigenOpmerkingFiets" prefHeight="26.0" prefWidth="166.0" text="Wijzigen opmerking" />
+   </children>
+</AnchorPane>
