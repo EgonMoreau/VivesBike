@@ -13,67 +13,6 @@
 - assertJ
 - SQL
 
-## Deadlines
-:white_check_mark: Opdracht use-cases: 11 oktober 2019 om 23u55 op Toledo
-
-:black_square_button: Definitieve versie: 3 april 2020 om 23u55 op GitHub.
-
-## Indienen definitieve versie
-
-Dien de definitieve versie van je applicatie in met **alle gevraagde functionaliteit** en **de testklassen
-voor RitDAO en RitService**.
-
-Weet dat de versie van je applicatie zoals deze op GitHub staat op
-30 maart om 23:55 telt als de ingediende definitieve versie.
-
-:bangbang:**Zorg er dus zeker voor dat al je code is
-gecommit en gepusht naar je private remote repository op GitHub!**
-
-Voeg in de root van je project op GitHub ook een :page_facing_up: INFO.md bestand toe met hierin nuttige informatie uit jullie project
-
-Volgende punten komen hierin zeker aan bod:
-- Maak je gebruik van de gegeven database? Indien niet, waarom niet (argumenteer)?
-- Welke extra functionaliteiten heb je aan de applicatie toegevoegd?
-- Som de tekortkomingen/fouten in je applicatie op.
-- Indien er extra handelingen nodig zijn om het project te kunnen starten in IntelliJ, beschrijf
-deze dan duidelijk. :point_left: Liefst geen
-- andere...
-
-Voeg ook een export van je databank toe aan de GitHub repository (create statements en populate
-statements). Doe dit in een map `/databank` in de root van je project
-
-Zorg ervoor dat alle code compileert, het project build en alle testen succesvol zijn. Doe een Maven Clean Install `mvn clean install` en zorg ervoor dat je een :trophy: `BUILD SUCCESS` :trophy: krijgt.
-
-## Puntenverdeling :100:
-- Wie **administratief** niet in orde is, verliest punten op het eindresultaat van de opdracht. Er wordt onder andere rekening gehouden met volgende zaken:
-  - naam bestand use-case
-  - bestand in pdf
-  - pdf in degelijk Nederlands
-  - scripts voorzien
-  - de commitfrequentie en de omschrijving van de commits
-- Use-cases op **10%**. Let op je taal!
-- Data accessklassen op **10%**
-- Serviceklassen op **30%**
-- Grafische userinterface op **15%**. Wie meer schermen maakt of meer functionaliteit voorziet,
-kan extra punten krijgen, maar je kan maximum 15/15 behalen voor dit onderdeel.
-- Testklassen op **25%**. Je kan extra punten verdienen als je voor de andere klassen ook goede
-testklassen schrijft, maar je kan maximum 25/25 behalen voor dit onderdeel.
-- Mondeling op **10%**. Wie geen mondeling aflegt, krijgt ook geen punten voor de onderdelen data accessklassen, serviceklassen, grafische userinterface en testklassen. Wanneer tijdens het mondeling examen blijkt dat de student z’n project niet kan toelichten, kan hij/zij extra punten verliezen op de andere onderdelen.
-
-
-## Gegeven
-Via GitHub Classroom krijgen jullie per groep een private repository toegekend om aan dit project te werken. De repository bevat reeds een startproject waarop jullie moeten verder werken.
-
-Dit startproject :rocket: bevat onder andere:
-- Bags: Fiets, Lid & Rit
-- Connectieklassen: ConnectionManager en DBProp
-- Datatypeklassen: Standplaats, Status en Rijksregisternummer
-- Exceptionklassen: DBException en ApplicationException
-- Concrete klassen voor de data accesslaag, die aangevuld moeten worden.
-- Concrete klassen voor de servicelaag, die aangevuld moeten worden.
-- Eenvoudige UI-klassen die aangevuld moeten worden
-
-
 ## Opgave
 Vives wil naar analogie van de blue-bike :bike:, ook fietsen verhuren (standplaats station) bij de verschillende vestigingen van VIVES.
 
@@ -132,5 +71,3 @@ en de knoppen OK en Annuleren enabled. Het wijzigen verloopt analoog.
 
 Bij het uitschrijven van een lid wordt geen nieuw scherm geopend. De systeemdatum wordt ingevuld
 en de checkbox uitgeschreven wordt aangevinkt.
-
-:+1: SUCCES :+1:
